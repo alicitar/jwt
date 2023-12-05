@@ -54,7 +54,7 @@ def live():
 # CON HEADER
 @app.route('/get-token/', methods=['GET'])
 def get_token():
-    key = request.headers.get('wsleafnoise')
+    key = request.headers.get('wsEjemplo')
     if key == 'ZTMR@73pq':
         token = jwt.encode({'exp' : datetime.utcnow() + timedelta(minutes=5)}, app.config["SECRET_KEY"])
 
